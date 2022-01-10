@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 1.6;
+	color: rgb(29, 29, 29);
+	background: rgb(179, 179, 179);
+}
+
+main {
+	width: 100%;
+	max-width: 720px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 85vh;
+}
+
+h1 {
+	font-size: 3.2rem;
+	line-height: 1.2;
+	margin: 2.6rem 0;
+}
+
+.form-container {
+	width: 100%;
+	border: 1px solid rgb(29, 29, 29);
+	padding: 1rem 0 3rem 0;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgb(185, 177, 158);
+}
+
+form {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form-input {
+	width: 100%;
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-size: 1.8rem;
+	font-weight: 300;
+	margin: 0.5rem 0;
+}
+
+input,
+textarea,
+button {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 0.7rem;
+}
+
+.submit-btn {
+	width: 50%;
+	margin: 1rem 0;
+	background: rgb(137, 165, 197);
+	box-shadow: 1px 1px 1px rgb(143, 143, 143);
+	cursor: pointer;
+}
+
+.notes-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 0;
+	border: 1px solid rgb(29, 29, 29);
+	padding: 1rem 1rem 3rem 1rem;
+	border-radius: 0.5rem;
+}
+
+#notes {
+	width: 100%;
+	max-height: 650px;
+	overflow-y: scroll;
+}
+
+#notes::-webkit-scrollbar {
+	width: 1rem;
+}
+
+#notes::-webkit-scrollbar-thumb {
+	background-color: rgb(185, 177, 158);
+	outline: 1px solid slategrey;
+}
+
+.note {
+	width: 100%;
+	border: 1px solid rgb(88, 88, 88);
+	background-color: rgb(255, 255, 136);
+	border-radius: 5px;
+	padding: 1rem;
+	margin: 1rem 0;
+	display: flex;
+}
+
+.clear-btn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: rgb(121, 91, 91);
+	color: rgb(192, 211, 211);
+	font-weight: bold;
+}
+
+.note-content {
+	flex-grow: 1;
+}
+
+.note-delete-icon {
+	flex-basis: content;
+	flex-shrink: 0;
+}
+
+.delete-icon {
+	cursor: pointer;
+}
+
+footer {
+	height: 8vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.links {
+	margin-top: 1rem;
+	width: 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.error {
+	border: 3px solid rgb(110, 66, 66);
+}
