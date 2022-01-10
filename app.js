@@ -34,6 +34,12 @@ const validateTitle = title => {
 	return valid;
 };
 
+clearBtn.addEventListener('click', () => {
+	notes = [];
+	renderNotes();
+	saveNotes();
+});
+
 submitBtn.addEventListener('click', event => {
 	event.preventDefault();
 	const text = noteInput.value;
@@ -58,10 +64,15 @@ submitBtn.addEventListener('click', event => {
 const renderNotes = () => {
 	const noteContainer = document.querySelector('#notes');
 	noteContainer.innerHTML = '';
-	notes.forEach(note => {
-		const n = createNote(note.title, note.text);
-		noteContainer.appendChild(n);
-	});
+	if (notes.length > 0) {
+		document.querySelector('#no-notes').style.display = 'none';
+		notes.forEach(note => {
+			const n = createNote(note.title, note.text);
+			noteContainer.appendChild(n);
+		});
+	} else {
+		document.querySelector('#no-notes').style.display = 'block';
+	}
 };
 
 const deleteNote = event => {
